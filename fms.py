@@ -11,7 +11,7 @@ class Flight():
   def __str__(self):
     # < align to left
     # > align to the right
-    return f"{self.__flight_number:<8} = {self.airline:<20} to {self.destination:<20} at {self.time} ({self.flight_type})"
+    return f"{self.__flight_number:<8} - {self.airline:<20} to {self.destination:<20} at {self.time} ({self.flight_type})"
 
 
 class FlightManager():
@@ -36,6 +36,12 @@ class FlightManager():
     filtered_destinations = list(filtered_destinations)
 
     return self.sort_flights(filtered_destinations)
+
+  def get_flights_by_hour(self, hour):
+    filtered_by_hour = filter(lambda f: f.time.split(" ")[1][:2] == hour, self.flights) # 2023-11-19, 16:47
+    filtered_by_hour = list(filtered_by_hour)
+
+    return self.sort_flights(filtered_by_hour)
 
   def sort_flights(self, flights):
     return sorted(flights, key=lambda f: f.time)
@@ -64,6 +70,20 @@ def print_flights(flights: FlightManager):
   for flight in flights:
     print(flight)
 
+def handle_saving(flights):
+  choice = input("Do you want to save this list (y/n)? ").lower()
+
+  if choice != 'y':
+    return
+
+  filename = input("Filename: ")
+  with open(f"{filename}.txt", "w") as file:
+    file.write(flights)
+
+def parse_flights_for_saving(flights):
+  return [str(flight) for flight in flights]
+
+
 def handle_input(flights: FlightManager):
   menu()
   choice = input("Enter your choice: ")
@@ -71,25 +91,31 @@ def handle_input(flights: FlightManager):
   if choice == '1':
     arrivals = flights.get_flights_by_type('arrival')
     print_flights(arrivals)
+    handle_saving("\n".join(parse_flights_for_saving(arrivals)))
     handle_input(flights)
   elif choice == '2':
-    arrivals = flights.get_flights_by_type('departure')
-    print_flights(arrivals)
+    departure = flights.get_flights_by_type('departure')
+    print_flights(departure)
+    handle_saving("\n".join(parse_flights_for_saving(departure)))
     handle_input(flights)
   elif choice == '3':
     destination = input("Enter destination: ").lower()
     destination_flights = flights.get_flights_by_destination(destination)
     print_flights(destination_flights)
+    handle_saving("\n".join(parse_flights_for_saving(destination_flights)))
     handle_input(flights)
   elif choice == '4':
-    #
+    hour = input("Hour: ")
+    flights_by_hour = flights.get_flights_by_hour(hour)
+    print_flights(flights_by_hour)
+    handle_saving("\n".join(parse_flights_for_saving(flights_by_hour)))
     handle_input(flights)
   else:
     return
 
 def main():
   filename = input("Enter filename: ")
-  flights = read_flights_from_csv("flights.csv")
+  flights = read_flights_from_csv(filename)
 
   handle_input(flights)
 

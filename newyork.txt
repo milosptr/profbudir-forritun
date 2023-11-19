@@ -1,0 +1,6 @@
+LH431    - Qantas               to New York             at 2023-11-19 08:06 (departure)
+QA986    - American Airlines    to New York             at 2023-11-19 11:51 (arrival)
+DL141    - British Airways      to New York             at 2023-11-19 12:42 (arrival)
+AA861    - Qantas               to New York             at 2023-11-19 12:43 (departure)
+AA608    - Delta                to New York             at 2023-11-19 15:28 (departure)
+DL944    - Qantas               to New York             at 2023-11-19 16:17 (arrival)
