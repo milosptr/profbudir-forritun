@@ -1,0 +1,33 @@
+AA341,Qantas,London,2023-11-19 08:08,departure
+LH431,Qantas,New York,2023-11-19 08:06,departure
+QA393,British Airways,London,2023-11-19 13:19,departure
+BA949,American Airlines,Paris,2023-11-19 13:38,departure
+LH345,Lufthansa,Paris,2023-11-19 16:58,arrival
+DL944,Qantas,New York,2023-11-19 16:17,arrival
+LH644,British Airways,London,2023-11-19 16:47,departure
+DL417,Qantas,Sydney,2023-11-19 16:19,departure
+BA376,British Airways,Sydney,2023-11-19 09:06,arrival
+QA786,Delta,Frankfurt,2023-11-19 09:20,departure
+AA590,Delta,Frankfurt,2023-11-19 10:37,arrival
+QA757,American Airlines,Paris,2023-11-19 10:59,arrival
+AA489,Lufthansa,London,2023-11-19 10:47,arrival
+AA676,Lufthansa,Frankfurt,2023-11-19 11:21,arrival
+LH284,Qantas,Paris,2023-11-19 11:31,departure
+AA481,American Airlines,London,2023-11-19 14:03,departure
+DL562,British Airways,Frankfurt,2023-11-19 15:24,arrival
+QA322,British Airways,Sydney,2023-11-19 15:39,arrival
+DL357,American Airlines,London,2023-11-19 15:55,arrival
+AA608,Delta,New York,2023-11-19 15:28,departure
+DL805,American Airlines,Sydney,2023-11-19 15:26,arrival
+BA631,Lufthansa,Frankfurt,2023-11-19 15:01,arrival
+DL312,British Airways,London,2023-11-19 11:51,departure
+AA742,British Airways,Paris,2023-11-19 11:32,arrival
+BA250,Lufthansa,London,2023-11-19 11:19,arrival
+QA986,American Airlines,New York,2023-11-19 11:51,arrival
+DL141,British Airways,New York,2023-11-19 12:42,arrival
+LH231,British Airways,Paris,2023-11-19 12:52,departure
+QA265,Delta,London,2023-11-19 12:20,departure
+AA861,Qantas,New York,2023-11-19 12:43,departure
+DL789,Qantas,Paris,2023-11-19 13:58,arrival
+QA515,Qantas,Sydney,2023-11-19 14:47,departure
+BA466,American Airlines,London,2023-11-19 16:55,arrival
